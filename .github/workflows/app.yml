@@ -15,12 +15,14 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
 
     - name: Install dependencies for hosting script
-      run: pip install -r sample_q&a/requirements.txt
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r sample_q&a/requirements.txt
 
     - name: Run deployment script
       run: python sample_q&a/hosting/hosting.py
