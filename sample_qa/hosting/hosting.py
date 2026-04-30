@@ -1,7 +1,7 @@
 from huggingface_hub import HfApi
 import os
-os.environ['HF_TOKEN'] = userdata.get('HF_TOKEN')
-hf_api_key = userdata.get('HF_TOKEN')
+#os.environ['HF_TOKEN'] = userdata.get('HF_TOKEN')
+hf_api_key = os.getenv('HF_TOKEN')
 api = HfApi(token=hf_api_key)
 repo_id="Lokeshnathy/Sample-q-a",
 repo_type="space"
