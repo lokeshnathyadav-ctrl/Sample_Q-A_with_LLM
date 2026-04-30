@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_groq import ChatGroq
-st.title("Q&A with LLM")
+st.title("QA with LLM")
 groq_api_key = st.sidebar.text_input("ChatGroq API Key",type="password")
 def generate_response(input_text):
   llm = ChatGroq(
